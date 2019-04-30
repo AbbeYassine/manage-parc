@@ -1,0 +1,47 @@
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="#">Dashboard</a>
+  </li>
+  <li class="breadcrumb-item active">Tables</li>
+</ol>
+
+<!-- DataTables Example -->
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-car"></i>
+    Liste des Voitures
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+        <tr>
+          <th>Immatriculation</th>
+          <th>Marque</th>
+          <th>Modele</th>
+          <th>Puissance</th>
+          <th>Carburant</th>
+          <th>Date Mise en Circulation</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let voiture of voitures">
+          <td>{{voiture.immatriculation}}</td>
+          <td>{{voiture.marque}}</td>
+          <td>{{voiture.modele}}</td>
+          <td>{{voiture.puissance}}</td>
+          <td>{{voiture.carburant}}</td>
+          <td>{{voiture.dateMiseCirculation}}</td>
+          <td>
+            <a class="btn btn-primary">Edit</a>
+            <a class="btn btn-danger">Delete</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>

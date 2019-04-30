@@ -1,0 +1,78 @@
+<div class="card card-register mx-auto mt-5">
+  <div class="card-header">Ajouter une Voiture</div>
+  <div class="card-body">
+    <form (ngSubmit)="valider()">
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <input type="text" id="immat" class="form-control" name="immat" placeholder="Immatriculation"
+                     required="required"
+                     autofocus="autofocus" [(ngModel)]="voiture.immatriculation">
+              <label for="immat">Immatriculation</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <input type="date" id="date" class="form-control" name="date" placeholder="Date de mise en Circulation"
+                     required="required"
+                     autofocus="autofocus" [(ngModel)]="voiture.dateMiseCirculation">
+              <label for="date">Date de mise en circulation</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <input type="text" id="modele" class="form-control" name="modele" placeholder="Immatriculation"
+                     required="required"
+                     autofocus="autofocus" [(ngModel)]="voiture.modele">
+              <label for="modele">Modele</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <input type="text" id="puiss" class="form-control" name="puiss" placeholder="Puissance"
+                     required="required"
+                     autofocus="autofocus" [(ngModel)]="voiture.puissance">
+              <label for="puiss">Puissance</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="carb">Carburant</label>
+              <select type="text" id="carb" [(ngModel)]="voiture.carburant" name="carb" class="form-control"
+                      required="required">
+                <option value="essence">Essence</option>
+                <option value="diesel">Diesel</option>
+              </select>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-label">
+              <label for="marque">Marque</label>
+              <select type="text" id="marque" [(ngModel)]="voiture.marque" name="marque" class="form-control"
+                      required="required">
+                <option value="audi">Audi</option>
+                <option value="citroen">Citroen</option>
+                <option value="fiat">Fiat</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary btn-block">Ajouter</button>
+    </form>
+  </div>
+</div>
