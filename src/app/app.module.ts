@@ -7,6 +7,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {LayoutsModule} from './layouts/layouts.module';
 import {ManageUserModule} from './manage-user/manage-user.module';
 import {ManageVoitureModule} from './manage-voiture/manage-voiture.module';
+import {VoitureService} from './shared/services/voiture.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,12 @@ import {ManageVoitureModule} from './manage-voiture/manage-voiture.module';
     SharedModule,
     AppRoutingModule,
     LayoutsModule,
+    HttpClientModule,
     ManageUserModule,
     ManageVoitureModule,
     BrowserModule
   ],
-  providers: [],
+  providers: [VoitureService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

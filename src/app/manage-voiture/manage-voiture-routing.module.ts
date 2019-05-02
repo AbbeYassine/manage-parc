@@ -14,6 +14,10 @@ export const routes: Routes = [
       {
         path: 'list',
         component: ListVoitureComponent
+      },
+      {
+        path: 'edit/:voitureId',
+        component: AddVoitureComponent
       }
     ]
   }

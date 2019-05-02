@@ -1,5 +1,5 @@
 <div class="card card-register mx-auto mt-5">
-  <div class="card-header">Ajouter une Voiture</div>
+  <div class="card-header">{{voitureId ? 'Modifier une Voiture' : 'Ajouter une Voiture'}}</div>
   <div class="card-body">
     <form (ngSubmit)="valider()">
       <div class="form-group">
@@ -72,7 +72,7 @@
       </div>
 
 
-      <button type="submit" class="btn btn-primary btn-block">Ajouter</button>
+      <button type="submit" class="btn btn-primary btn-block">{{voitureId ? 'Modifier' : 'Ajouter'}}</button>
     </form>
   </div>
 </div>

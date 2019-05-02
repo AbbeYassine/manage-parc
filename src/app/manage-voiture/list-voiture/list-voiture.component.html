@@ -27,7 +27,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let voiture of voitures">
+        <tr *ngFor="let voiture of voitures;let i=index">
           <td>{{voiture.immatriculation}}</td>
           <td>{{voiture.marque}}</td>
           <td>{{voiture.modele}}</td>
@@ -35,8 +35,8 @@
           <td>{{voiture.carburant}}</td>
           <td>{{voiture.dateMiseCirculation}}</td>
           <td>
-            <a class="btn btn-primary">Edit</a>
-            <a class="btn btn-danger">Delete</a>
+            <a class="btn btn-primary" [routerLink]="['/manage-voiture/edit/'+voiture.id]">Edit</a>
+            <a class="btn btn-danger" (click)="delete(i)">Delete</a>
           </td>
         </tr>
         </tbody>
