@@ -7,8 +7,8 @@ declare var jQuery: any;
 
 @Component({
   selector: 'app-list-employe',
-  templateUrl: './list-emlpoye.component.html',
-  styleUrls: ['./list-emlpoye.component.css']
+  templateUrl: './list-employe.component.html',
+  styleUrls: ['./list-employe.component.css']
 })
 export class ListEmployeComponent implements OnInit {
 

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Employe} from '../../shared/models/employe';
 import {EmployeService} from '../../shared/services/employe.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -17,7 +17,7 @@ export class AddEmployeComponent implements OnInit {
   isEdit: boolean;
   employeId: number;
 
-  constructor(private employeService:EmployeService,
+  constructor(private employeService: EmployeService,
               private route: ActivatedRoute,
               private router: Router) {
     this.employe = new Employe();

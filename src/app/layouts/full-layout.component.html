@@ -87,8 +87,8 @@
         <span>Gestion des Employés</span>
       </a>
       <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-        <a class="dropdown-item" href="login.html">List des Employés</a>
-        <a class="dropdown-item" href="login.html">Ajouter une Employé</a>
+        <a class="dropdown-item" [routerLink]="['/manage-employe/list']">List des Employés</a>
+        <a class="dropdown-item" [routerLink]="['/manage-employe/add']">Ajouter une Employé</a>
       </div>
     </li>
 
@@ -99,8 +99,8 @@
         <span>Gestion des Mission</span>
       </a>
       <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-        <a class="dropdown-item" href="login.html">List des mission</a>
-        <a class="dropdown-item" href="login.html">Ajouter une mission </a>
+        <a class="dropdown-item" [routerLink]="['/manage-mission/list']">List des mission</a>
+        <a class="dropdown-item" [routerLink]="['/manage-mission/add']">Ajouter une mission </a>
       </div>
 
     </li>
@@ -112,7 +112,7 @@
       </a>
       <div class="dropdown-menu" aria-labelledby="pagesDropdown">
         <a class="dropdown-item" href="login.html">List des voitures</a>
-        <a class="dropdown-item" href="login.html">Ajouter  maintenance</a>
+        <a class="dropdown-item" href="login.html">Ajouter maintenance</a>
       </div>
     </li>
     <li class="nav-item dropdown">

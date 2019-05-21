@@ -10,6 +10,8 @@ import {ManageVoitureModule} from './manage-voiture/manage-voiture.module';
 import {VoitureService} from './shared/services/voiture.service';
 import {HttpClientModule} from '@angular/common/http';
 import {ManageEmployeModule} from './manage-employe/manage-employe.module';
+import {EmployeService} from './shared/services/employe.service';
+import {MissionService} from './shared/services/mission.service';
 
 
 @NgModule({
@@ -26,7 +28,7 @@ import {ManageEmployeModule} from './manage-employe/manage-employe.module';
     ManageEmployeModule,
     BrowserModule,
   ],
-  providers: [VoitureService],
+  providers: [VoitureService, EmployeService, MissionService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
