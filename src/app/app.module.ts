@@ -9,6 +9,8 @@ import {ManageUserModule} from './manage-user/manage-user.module';
 import {ManageVoitureModule} from './manage-voiture/manage-voiture.module';
 import {VoitureService} from './shared/services/voiture.service';
 import {HttpClientModule} from '@angular/common/http';
+import {ManageEmployeModule} from './manage-employe/manage-employe.module';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     ManageUserModule,
     ManageVoitureModule,
-    BrowserModule
+    ManageEmployeModule,
+    BrowserModule,
   ],
   providers: [VoitureService],
   bootstrap: [AppComponent]

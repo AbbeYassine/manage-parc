@@ -6,6 +6,7 @@ import {ManageUserModule} from './manage-user/manage-user.module';
 import {ManageVoitureModule} from './manage-voiture/manage-voiture.module';
 
 
+
 export function loadManageUserModule() {
   return ManageUserModule;
 }
@@ -13,6 +14,8 @@ export function loadManageUserModule() {
 export function loadManageVoitureModule() {
   return ManageVoitureModule;
 }
+
+
 
 export const routes: Routes = [
   {
@@ -23,7 +26,7 @@ export const routes: Routes = [
       {
         path: 'manage-voiture',
         loadChildren: loadManageVoitureModule
-      }
+      },
       /*{
         path: 'manage-voiture',
         loadChildren: loadManageVoitureModule
