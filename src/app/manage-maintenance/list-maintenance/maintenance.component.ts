@@ -1,31 +1,30 @@
-
 import {Component, OnInit} from '@angular/core';
-import {Mission} from '../../shared/models/mission';
-import {MissionService} from '../../shared/services/mission.service';
+import {Maintenance} from '../../shared/models/maintenance';
+import {MaintenanceService} from '../../shared/services/maintenance.service';
 import Swal from 'sweetalert2';
 
 declare var jQuery: any;
 
 @Component({
-  selector: 'app-list-mission',
-  templateUrl: './list-mission.component.html',
-  styleUrls: ['./list-mission.component.css']
+  selector: 'app-list-maintenance',
+  templateUrl: './list-maintenance.component.html',
+  styleUrls: ['./list-maintenance.component.css']
 })
-export class ListMissionComponent implements OnInit {
+export class ListMaintenanceComponent implements OnInit {
 
 
-  missions:  Mission[] = [];
+  maintenances: Maintenance[] = [];
 
-  constructor(private missionService: MissionService) {
+  constructor(private maintenanceService: MaintenanceService) {
   }
 
   ngOnInit() {
 
 
-    this.missionService.getAll()
+    this.maintenanceService.getAll()
       .subscribe(
-        (data: Mission[]) => {
-          this.missions = data;
+        (data: Maitenance[]) => {
+          this.maintenances = data;
         },
         (error) => {
         }
@@ -48,7 +47,7 @@ export class ListMissionComponent implements OnInit {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.value) {
-        this.missionService.deleteById(this.missions[index].id)
+        this.maintenanceService.deleteById(this.maintenances[index].id)
           .subscribe(
             (data) => {
               Swal.fire(
@@ -56,7 +55,7 @@ export class ListMissionComponent implements OnInit {
                 'Your file has been deleted.',
                 'success'
               );
-              this.missions.splice(index, 1);
+              this.maintenances.splice(index, 1);
             },
             (error) => {
 
@@ -69,4 +68,3 @@ export class ListMissionComponent implements OnInit {
   }
 
 }
-

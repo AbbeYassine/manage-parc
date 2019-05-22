@@ -6,7 +6,7 @@ import {ManageUserModule} from './manage-user/manage-user.module';
 import {ManageVoitureModule} from './manage-voiture/manage-voiture.module';
 import {ManageEmployeModule} from './manage-employe/manage-employe.module';
 import {ManageMissionModule} from './manage-mission/manage-mission.module';
-
+import {ManageMaintenanceModule} from './manage-maintenance/manage-maintenance.module';
 
 export function loadManageUserModule() {
   return ManageUserModule;
@@ -22,6 +22,9 @@ export function loadManageEmployeModule() {
 
 export function loadManageMissionModule() {
   return ManageMissionModule;
+}
+export function loadManageMaintenanceModule() {
+  return ManageMaintenanceModule;
 }
 
 
@@ -42,6 +45,10 @@ export const routes: Routes = [
       {
         path: 'manage-mission',
         loadChildren: loadManageMissionModule
+      },
+      {
+        path: 'manage-maintenance',
+        loadChildren: loadManageMaintenanceModule()
       }
       /*{
         path: 'manage-voiture',

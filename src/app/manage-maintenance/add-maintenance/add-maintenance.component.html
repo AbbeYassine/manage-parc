@@ -1,0 +1,60 @@
+
+
+<div class="card card-register mx-auto mt-5">
+  <div class="card-header">{{maintenanceId ? 'Modifier une Maintenance' : 'Ajouter une Maintenance'}}</div>
+  <div class="card-body">
+    <form (ngSubmit)="valider()">
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="voiture">Voiture</label>
+              <select type="text" id="voiture" [(ngModel)]="maintenance.voiture" name="voiture" class="form-control"
+                      required="required">
+                <option *ngFor="let voiture of voitures" value="{{voiture.id}}">{{voiture.immatriculation}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="dateMaintenace">Date Maintenance</label>
+              <input type="date" id="dateMaintenance" [(ngModel)]="maintenance.datemaintenance" name="dateMaintenance" class="form-control"
+                     required="required">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <input type="number" id="montant" class="form-control" name="nom" placeholder="Montant"
+                     required="required"
+                     autofocus="autofocus" [(ngModel)]="maintenance.montant">
+              <label for="montant">Montant</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <input type="text" id="kilometrage" class="form-control" name="kilometrage" placeholder="Kilométrage"
+                     required="required"
+                     autofocus="autofocus" [(ngModel)]="maintenance.kilometrage">
+              <label for="kilometrage">Kilométrage</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary btn-block">{{maintenanceId ? 'Modifier' : 'Ajouter'}}</button>
+    </form>
+  </div>
+</div>
+
+

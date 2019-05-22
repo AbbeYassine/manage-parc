@@ -11,7 +11,7 @@
 <div class="card mb-3">
   <div class="card-header">
     <i class="fas fa-car"></i>
-    Liste des Missions
+    Liste des Maintenances
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -19,19 +19,19 @@
         <thead>
         <tr>
           <th>Montant</th>
-          <th>Date-debut</th>
-          <th>Date-fin</th>
-          <th>Objet</th>
+          <th>Date</th>
+          <th>kilometrage</th>
+          <th></th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let mission of missions;let i=index">
+        <tr *ngFor="let maintenance of mainenances;let i=index">
           <td>{{mission.montant}}</td>
           <td>{{mission.date-debut}}</td>
           <td>{{{mission.date-fin}}</td>
           <td>{{mission.objet}}</td>
           <td>
-            <a class="btn btn-primary" [routerLink]="['/manage-mission/edit/'+mission.id]">Edit</a>
+            <a class="btn btn-primary" [routerLink]="['/manage-maintenance/edit/'+maintenance.id]">Edit</a>
             <a class="btn btn-danger" (click)="delete(i)">Delete</a>
           </td>
         </tr>
@@ -41,4 +41,5 @@
   </div>
   <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>
+
 
