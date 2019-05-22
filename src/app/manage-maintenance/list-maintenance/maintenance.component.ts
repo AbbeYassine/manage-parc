@@ -7,8 +7,8 @@ declare var jQuery: any;
 
 @Component({
   selector: 'app-list-maintenance',
-  templateUrl: './list-maintenance.component.html',
-  styleUrls: ['./list-maintenance.component.css']
+  templateUrl: './maintenance.component.html',
+  styleUrls: ['./maintenance.component.css']
 })
 export class ListMaintenanceComponent implements OnInit {
 
@@ -23,7 +23,7 @@ export class ListMaintenanceComponent implements OnInit {
 
     this.maintenanceService.getAll()
       .subscribe(
-        (data: Maitenance[]) => {
+        (data: Maintenance[]) => {
           this.maintenances = data;
         },
         (error) => {

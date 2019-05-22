@@ -1,4 +1,3 @@
-
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
   <li class="breadcrumb-item">
@@ -25,11 +24,11 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let maintenance of mainenances;let i=index">
-          <td>{{mission.montant}}</td>
-          <td>{{mission.date-debut}}</td>
-          <td>{{{mission.date-fin}}</td>
-          <td>{{mission.objet}}</td>
+        <tr *ngFor="let maintenance of maintenances;let i=index">
+          <td>{{maintenance.montant}}</td>
+          <td>{{maintenance.datemaintenance}}</td>
+          <td>{{maintenance.kilometrage}}</td>
+          <td>{{maintenance.voiture}}</td>
           <td>
             <a class="btn btn-primary" [routerLink]="['/manage-maintenance/edit/'+maintenance.id]">Edit</a>
             <a class="btn btn-danger" (click)="delete(i)">Delete</a>

@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {Mission} from '../../shared/models/mission';
+import {MissionDTO} from '../../shared/models/mission';
 import {MissionService} from '../../shared/services/mission.service';
 import {Employe} from '../../shared/models/employe';
 import {Voiture} from '../../shared/models/voiture';
 import {EmployeService} from '../../shared/services/employe.service';
 import {VoitureService} from '../../shared/services/voiture.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-mission',
@@ -13,7 +14,7 @@ import {VoitureService} from '../../shared/services/voiture.service';
 })
 export class AddMissionComponent implements OnInit {
 
-  mission: Mission;
+  mission: MissionDTO;
 
   missionId: number;
 
@@ -23,7 +24,7 @@ export class AddMissionComponent implements OnInit {
   constructor(private missionService: MissionService,
               private employeService: EmployeService,
               private voitureService: VoitureService) {
-    this.mission = new Mission();
+    this.mission = new MissionDTO();
   }
 
   ngOnInit() {
@@ -53,6 +54,22 @@ export class AddMissionComponent implements OnInit {
   }
 
   valider() {
+
+    this.missionService.add(this.mission)
+      .subscribe(
+        (data) => {
+          Swal.fire({
+            title: 'Succées!',
+            text: 'Ajout Mission avec succées',
+            type: 'success',
+            confirmButtonText: 'Cool'
+          });
+        },
+        (error) => {
+
+        }
+      );
+
     console.log(this.mission);
   }
 }

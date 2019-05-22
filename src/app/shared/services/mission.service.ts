@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Config} from '../config';
-import {Mission} from '../models/mission';
+import {Mission, MissionDTO} from '../models/mission';
 
 @Injectable()
 export class MissionService {
@@ -11,7 +11,7 @@ export class MissionService {
 
   }
 
-  add(mission: Mission) {
+  add(mission: MissionDTO) {
     return this.httpClient.post(Config.baseUrl + '/api/mission', mission);
   }
 

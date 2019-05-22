@@ -10,3 +10,11 @@ export class Mission {
   dateFin: string;
   objet: string;
 }
+export class MissionDTO {
+  employeId: number ;
+  voitureId: number ;
+  montant: number;
+  dateDebut: string;
+  dateFin: string;
+  objet: string;
+}

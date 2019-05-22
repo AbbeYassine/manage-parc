@@ -1,4 +1,3 @@
-
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
   <li class="breadcrumb-item">
@@ -19,16 +18,17 @@
         <thead>
         <tr>
           <th>Montant</th>
-          <th>Date-debut</th>
-          <th>Date-fin</th>
+          <th>Date debut</th>
+          <th>Date fin</th>
           <th>Objet</th>
+          <th>Actions</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let mission of missions;let i=index">
           <td>{{mission.montant}}</td>
-          <td>{{mission.date-debut}}</td>
-          <td>{{{mission.date-fin}}</td>
+          <td>{{mission.dateDebut}}</td>
+          <td>{{mission.dateFin}}</td>
           <td>{{mission.objet}}</td>
           <td>
             <a class="btn btn-primary" [routerLink]="['/manage-mission/edit/'+mission.id]">Edit</a>

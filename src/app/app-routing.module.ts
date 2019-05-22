@@ -23,6 +23,7 @@ export function loadManageEmployeModule() {
 export function loadManageMissionModule() {
   return ManageMissionModule;
 }
+
 export function loadManageMaintenanceModule() {
   return ManageMaintenanceModule;
 }
@@ -48,7 +49,7 @@ export const routes: Routes = [
       },
       {
         path: 'manage-maintenance',
-        loadChildren: loadManageMaintenanceModule()
+        loadChildren: loadManageMaintenanceModule
       }
       /*{
         path: 'manage-voiture',

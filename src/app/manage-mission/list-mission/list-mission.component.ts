@@ -1,4 +1,3 @@
-
 import {Component, OnInit} from '@angular/core';
 import {Mission} from '../../shared/models/mission';
 import {MissionService} from '../../shared/services/mission.service';
@@ -14,7 +13,7 @@ declare var jQuery: any;
 export class ListMissionComponent implements OnInit {
 
 
-  missions:  Mission[] = [];
+  missions: Mission[] = [];
 
   constructor(private missionService: MissionService) {
   }

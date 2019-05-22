@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Maintenance, Maintenance} from '../../shared/models/maintenance';
+import {Maintenance} from '../../shared/models/maintenance';
 import {MaintenanceService} from '../../shared/services/maintenance.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import Swal from 'sweetalert2';
@@ -26,7 +26,6 @@ export class AddMaintenanceComponent implements OnInit {
   }
 
   ngOnInit() {
-
     if (this.maintenanceId) {
       this.maintenanceService.getById(this.maintenanceId)
         .subscribe(
