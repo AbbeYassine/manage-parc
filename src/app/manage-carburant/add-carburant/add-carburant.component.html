@@ -1,0 +1,55 @@
+<div class="card card-register mx-auto mt-5">
+  <div class="card-header">{{carburantId ? 'Modifier un carburant' : 'Ajouter un carburant'}}</div>
+  <div class="card-body">
+    <form (ngSubmit)="valider()">
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <input type="text" id="type" class="form-control" name="type" placeholder="type"
+                     required="required"
+                     autofocus="autofocus" [(ngModel)]="carburant.type">
+              <label for="type">Type de carburant</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <input type="montanttotale" id="montanttotale" class="form-control" name="montanttotale" placeholder="montanttotale"
+                     required="required"
+                     autofocus="autofocus" [(ngModel)]="carburant.montanttotale">
+              <label for="montanttotale"> Montant totale</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <input type="text" id="benificaire" class="form-control" name="benificaire" placeholder="benificaire"
+                     required="required"
+                     autofocus="autofocus" [(ngModel)]="carburant.benificaire">
+              <label for="benificaire">Bénifcaire</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <input type="text" id="montantrestant" class="form-control" name="montantrestant" placeholder="montantrestant"
+                     required="required"
+                     autofocus="autofocus" [(ngModel)]="carburant.montantrestant">
+              <label for="montantrestant">Montant restant</label>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary btn-block">{{voitureId ? 'Modifier' : 'Ajouter'}}</button>
+    </form>
+  </div>
+</div>
+
+

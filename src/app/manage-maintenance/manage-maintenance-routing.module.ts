@@ -16,7 +16,7 @@ const routes: Routes = [
         component: ListMaintenanceComponent
       },
       {
-        path: 'edit/:employeId',
+        path: 'edit/:maintenanceId',
         component: AddMaintenanceComponent
       }
     ]

@@ -39,7 +39,6 @@ export class AddVoitureComponent implements OnInit {
         );
     }
   }
-
   valider() {
     console.log(this.voiture);
     if (this.voitureId) {
