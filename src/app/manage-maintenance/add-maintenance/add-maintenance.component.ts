@@ -1,8 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {Maintenance} from '../../shared/models/maintenance';
+import {Maintenance, MaintenanceDTO} from '../../shared/models/maintenance';
 import {MaintenanceService} from '../../shared/services/maintenance.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import Swal from 'sweetalert2';
+import {VoitureService} from '../../shared/services/voiture.service';
+import {Voiture} from '../../shared/models/voiture';
 
 @Component({
   selector: 'app-add-maintenance',
@@ -12,15 +14,17 @@ import Swal from 'sweetalert2';
 export class AddMaintenanceComponent implements OnInit {
 
 
-  maintenance: Maintenance;
+  maintenance: MaintenanceDTO;
+  voitures: Voiture[] = [];
 
   isEdit: boolean;
   maintenanceId: number;
 
   constructor(private maintenanceService: MaintenanceService,
+              private voitureService: VoitureService,
               private route: ActivatedRoute,
               private router: Router) {
-    this.maintenance = new Maintenance();
+    this.maintenance = new MaintenanceDTO();
 
     this.maintenanceId = parseInt(this.route.snapshot.paramMap.get('maintenanceId'), 0);
   }
@@ -30,13 +34,15 @@ export class AddMaintenanceComponent implements OnInit {
       this.maintenanceService.getById(this.maintenanceId)
         .subscribe(
           (data: Maintenance) => {
-            this.maintenance = data;
+            // this.maintenance = data;
           },
           (error) => {
 
           }
         );
     }
+
+    this.getAllVoitures();
   }
 
   valider() {
@@ -76,5 +82,13 @@ export class AddMaintenanceComponent implements OnInit {
     // TODO Appel WS
   }
 
+  private getAllVoitures() {
+    this.voitureService.getAll()
+      .subscribe(
+        (data: Voiture[]) => {
+          this.voitures = data;
+        }
+      );
+  }
 }
 

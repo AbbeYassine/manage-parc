@@ -7,3 +7,11 @@ export class Maintenance {
   datemaintenance: string;
   kilometrage: string;
 }
+
+export class MaintenanceDTO {
+  id: number;
+  voitureId: number;
+  montant: number;
+  datemaintenance: string;
+  kilometrage: string;
+}

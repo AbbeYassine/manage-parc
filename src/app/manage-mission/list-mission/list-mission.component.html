@@ -32,6 +32,7 @@
           <td>{{mission.objet}}</td>
           <td>
             <a class="btn btn-primary" [routerLink]="['/manage-mission/edit/'+mission.id]">Edit</a>
+            <a class="btn btn-primary" (click)="generateMissionPDF(mission)">Generate PDF</a>
             <a class="btn btn-danger" (click)="delete(i)">Delete</a>
           </td>
         </tr>

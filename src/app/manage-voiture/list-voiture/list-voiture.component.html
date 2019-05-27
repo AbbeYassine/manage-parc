@@ -23,6 +23,7 @@
           <th>Puissance</th>
           <th>Carburant</th>
           <th>Date Mise en Circulation</th>
+          <th>Disponibilité</th>
           <th>Actions</th>
         </tr>
         </thead>
@@ -34,6 +35,8 @@
           <td>{{voiture.puissance}}</td>
           <td>{{voiture.carburant}}</td>
           <td>{{voiture.dateMiseCirculation}}</td>
+          <td>{{voiture.etat? "Disponible" : "NON"}}
+          </td>
           <td>
             <a class="btn btn-primary" [routerLink]="['/manage-voiture/edit/'+voiture.id]">Edit</a>
             <a class="btn btn-danger" (click)="delete(i)">Delete</a>

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Config} from '../config';
-import {Maintenance} from '../models/maintenance';
+import {Maintenance, MaintenanceDTO} from '../models/maintenance';
 
 @Injectable()
 export class MaintenanceService {
@@ -11,7 +11,7 @@ export class MaintenanceService {
 
   }
 
-  add(maintenance: Maintenance) {
+  add(maintenance: MaintenanceDTO) {
     return this.httpClient.post(Config.baseUrl + '/api/maintenance', maintenance);
   }
 
@@ -23,7 +23,7 @@ export class MaintenanceService {
     return this.httpClient.get(Config.baseUrl + '/api/maintenance/' + maintenanceId);
   }
 
-  edit(maintenance: Maintenance) {
+  edit(maintenance: MaintenanceDTO) {
     return this.httpClient.put(Config.baseUrl + '/api/maintenance/' + maintenance.id, maintenance);
   }
 

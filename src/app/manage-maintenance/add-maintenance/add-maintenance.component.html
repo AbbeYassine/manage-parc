@@ -9,7 +9,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="voiture">Voiture</label>
-              <select type="text" id="voiture" [(ngModel)]="maintenance.voiture" name="voiture" class="form-control"
+              <select type="text" id="voiture" [(ngModel)]="maintenance.voitureId" name="voiture" class="form-control"
                       required="required">
                 <option *ngFor="let voiture of voitures" value="{{voiture.id}}">{{voiture.immatriculation}}</option>
               </select>

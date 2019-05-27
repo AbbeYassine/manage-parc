@@ -71,6 +71,21 @@
         </div>
       </div>
 
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <input type="checkbox" name="taxes" id="taxes" [(ngModel)]="voiture.taxes">
+              <label for="taxes">Taxes</label>
+            </div>
+            <div class="form-label-group">
+              <input type="checkbox" name="visite" id="visite" [(ngModel)]="voiture.visite">
+              <label for="visite">Visite</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       <button type="submit" class="btn btn-primary btn-block">{{voitureId ? 'Modifier' : 'Ajouter'}}</button>
     </form>

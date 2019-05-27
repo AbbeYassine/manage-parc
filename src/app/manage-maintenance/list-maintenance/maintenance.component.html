@@ -20,7 +20,8 @@
           <th>Montant</th>
           <th>Date</th>
           <th>kilometrage</th>
-          <th></th>
+          <th>Voiture</th>
+          <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -28,7 +29,7 @@
           <td>{{maintenance.montant}}</td>
           <td>{{maintenance.datemaintenance}}</td>
           <td>{{maintenance.kilometrage}}</td>
-          <td>{{maintenance.voiture}}</td>
+          <td>{{maintenance.voiture.immatriculation}}</td>
           <td>
             <a class="btn btn-primary" [routerLink]="['/manage-maintenance/edit/'+maintenance.id]">Edit</a>
             <a class="btn btn-danger" (click)="delete(i)">Delete</a>

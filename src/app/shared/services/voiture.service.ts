@@ -31,5 +31,9 @@ export class VoitureService {
   deleteById(id: number) {
     return this.httpClient.delete(Config.baseUrl + '/api/voiture/' + id);
   }
+
+  getAllDisponible() {
+    return this.httpClient.get(Config.baseUrl + '/api/voiture/disponible');
+  }
 }
 

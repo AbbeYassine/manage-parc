@@ -45,7 +45,7 @@ export class AddMissionComponent implements OnInit {
   }
 
   private getAllVoitrues() {
-    this.voitureService.getAll()
+    this.voitureService.getAllDisponible()
       .subscribe(
         (data: Voiture[]) => {
           this.voitures = data;

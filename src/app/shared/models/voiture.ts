@@ -6,4 +6,8 @@ export class Voiture {
   puissance: string;
   carburant: string;
   dateMiseCirculation: string;
+
+  etat: boolean = true;
+  taxes: boolean;
+  visite: boolean;
 }
